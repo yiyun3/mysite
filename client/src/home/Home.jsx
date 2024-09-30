@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import './Home.css'; 
+
 
 
 
@@ -11,8 +11,7 @@ const Home = () => {
   const [projects, setProjects] = useState([]);
   const [hoveredVideo, setHoveredVideo] = useState(null);
   const [error, setError] = useState(null);
-  const location = useLocation();
-  const navigate = useNavigate();
+ 
 
   const scrollToProjects = () => {
     if (location.pathname !== '/') {
@@ -94,23 +93,8 @@ const Home = () => {
 
 
   return (
-    <div className='content'>
-      <nav className='nav'>
-        <button>
-            <Link to="/">Home</Link>
-        </button>
-        <button>
-            <Link to={`/about`}>Abou/CV</Link>
-        </button>
-        <button onClick={scrollToProjects}>FEATURED PROJECTS</button>
-        <button>MAIL</button>
-        <button>
-           <a href="https://www.linkedin.com/in/yiyun-sens-735993184/" target="_blank" rel="noopener noreferrer">LINKEDIN</a></button>
-      </nav>
-
-    <div className='page-content'>
-      {location.pathname === '/' ? (
-        <div>
+    <div>
+    
       <div ref={projectsRef} id="projects">
         {error && <div style={{ color: 'red' }}>Error: {error}</div>}
         {videos.map((video, index) => (
@@ -155,11 +139,6 @@ const Home = () => {
           </div>
         ))}
       </div>
-    </div>
-     ) : (
-        <Outlet />
-      )}
-    </div>
     </div>
   );
 };
