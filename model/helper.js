@@ -4,7 +4,6 @@ const mysql = require("mysql");
 
 
 module.exports = async function db(query) {
-
   const results = {
     data: [],
     error: null,

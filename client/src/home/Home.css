@@ -1,0 +1,48 @@
+
+
+
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .page-content {
+    padding-top: 60px; /* 调整这个值以匹配导航栏的高度 */
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .project-container {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+  }
+  
+  .project-video {
+    width: 100%;
+  }
+  
+  .project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  .project-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
