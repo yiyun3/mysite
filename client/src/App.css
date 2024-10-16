@@ -1,0 +1,23 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #root {
+    min-height: 100vh;
+  }
+  
+  .page-background {
+    min-height: 100vh;
+  }
+  
+  .home-background {
+    background-color: black;
+   
+  }
+  
+  .about-background {
+    background-color: rgba(94, 89, 89, 0.251); /* 或您偏好的银灰色 */
+    color: black; /* 确保文字在银灰色背景上可见 */
+  }

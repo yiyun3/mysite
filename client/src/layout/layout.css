@@ -1,15 +1,41 @@
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .nav button {
-    margin: 0 10px;
-  }
-  
+  display: flex;
+  justify-content:center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+}
+
+.custom-btn {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.custom-btn:hover, .custom-btn.active {
+  background-color: rgba(239, 11, 223, 0.728);
+}
+
+.custom-btn.active {
+  font-weight: bold;
+}
+
+/* 确保链接按钮和普通按钮样式一致 */
+.custom-btn a, 
+.custom-btn Link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+ 
+}
+
+/* 移除 Link 组件可能带来的默认样式 */
+.custom-btn Link:hover {
+  text-decoration: none;
+}
+
